@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.container .box {
+				width:540px;
+				margin:50px;
+				display:table;
+                border: 2px;
+			}
+			.container .box .box-row {
+				display:table-row;
+			}
+			.container .box .box-cell {
+				display:table-cell;
+				width:33%;
+				padding:10px;
+			}
+			.container .box .box-cell.box1 {
+				background:#eeeeee;
+				color:white;
+				text-align:justify;
+			}
+			.container .box .box-cell.box2 {
+				 background: #ffffff; 
+				text-align:justify;
+                 color: black;
+                 text-align: center;
+                 font-size: x-large;
+			}
+            #decr{
+                font-size: xx-large;
+                margin-left: 60px;
+            }
+            #incr{
+                font-size: xx-large;
+                margin-left: 60px;
+            }
+           
+			.container .box .box-cell.box3 {
+				background:#eeeeee;
+				text-align:justify;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+		<div class="container">
+			<div class="box">
+				<div class="box-row">
+					<div class="box-cell box1">
+						<button id="decr" onclick="decrement()"> - </button> 
+					</div>
+					<div class="box-cell box2">
+						<h2 id="counting"></h2>
+					</div>
+					<div class="box-cell box3">
+						<button id="incr" onclick="increment()"> + </button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</center>
+	</body>
+    <script>
+        var x = 0;
+        document.getElementById("counting").innerText = x;
+        function increment() { x = x + 1;
+            document.getElementById("counting").innerText = x;
+        }
+        function decrement() { x = x - 1;
+            document.getElementById("counting").innerText = x;
+        }
+</script>
+</html>								
